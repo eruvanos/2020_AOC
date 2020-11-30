@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "2020_aoc"
+version = "0.1.0"
+description = ""
+authors = ["Maic Siemering <maic@siemering.tech>"]
+
+[tool.poetry.dependencies]
+python = "^3.9.0"
+mcore = {git = "https://github.com/eruvanos/mcore", rev = "main"}
+pytest = "^6.1.2"
+pytest-aoc = "^1.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
