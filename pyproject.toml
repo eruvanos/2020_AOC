@@ -9,6 +9,8 @@ python = "^3.9.0"
 mcore = {git = "https://github.com/eruvanos/mcore", rev = "main"}
 pytest = "^6.1.2"
 pytest-aoc = "^1.1"
+arcade = "^2.4.3"
+aocpy = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 
