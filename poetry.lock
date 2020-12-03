@@ -1,16 +1,23 @@
 [[package]]
 name = "aocpy"
 version = "0.0.1"
-description = "Advent of Code Automation"
+description = ""
 category = "main"
 optional = false
 python-versions = ">=3.6.0"
+develop = false
 
 [package.dependencies]
 beautifulsoup4 = "*"
 click = "*"
 pytz = "*"
 requests = "*"
+
+[package.source]
+type = "git"
+url = "https://github.com/eruvanos/aocpy.git"
+reference = "master"
+resolved_reference = "881ed99978c5272e554d0139c41d90f995073037"
 
 [[package]]
 name = "appdirs"
@@ -164,10 +171,10 @@ python-versions = ">=3.7.0"
 develop = true
 
 [package.extras]
-secnet = ["cryptography[] (>=3.1.1,<4.0.0)"]
-game = ["arcade[] (>=2.4.3,<3.0.0)", "esper[] (>=1.3,<2.0)"]
-test = ["requests[] (>=2.24.0,<3.0.0)", "Flask[] (>=1.1.2,<2.0.0)", "mirakuru[] (>=2.3.0,<3.0.0)"]
-all = ["cryptography[] (>=3.1.1,<4.0.0)", "arcade[] (>=2.4.3,<3.0.0)", "esper[] (>=1.3,<2.0)", "requests[] (>=2.24.0,<3.0.0)", "Flask[] (>=1.1.2,<2.0.0)", "mirakuru[] (>=2.3.0,<3.0.0)"]
+secnet = ["cryptography (>=3.1.1,<4.0.0)"]
+game = ["arcade (>=2.4.3,<3.0.0)", "esper (>=1.3,<2.0)"]
+test = ["requests (>=2.24.0,<3.0.0)", "Flask (>=1.1.2,<2.0.0)", "mirakuru (>=2.3.0,<3.0.0)"]
+all = ["cryptography (>=3.1.1,<4.0.0)", "arcade (>=2.4.3,<3.0.0)", "esper (>=1.3,<2.0)", "requests (>=2.24.0,<3.0.0)", "Flask (>=1.1.2,<2.0.0)", "mirakuru (>=2.3.0,<3.0.0)"]
 
 [package.source]
 type = "git"
@@ -412,12 +419,10 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9.0"
-content-hash = "723dff78a8c49be45167e19975a162e60d0523dfc842b0dbd2e4a7f5655c9293"
+content-hash = "d6cf68c1119a396848c1c26045465c07c65669aed947f19649e1486ccfc2779a"
 
 [metadata.files]
-aocpy = [
-    {file = "aocpy-0.0.1-py2.py3-none-any.whl", hash = "sha256:0456c9c725982e186c5a0266e892b60782d659bd8e73f794bbea8bcfd527798b"},
-]
+aocpy = []
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},

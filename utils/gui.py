@@ -26,7 +26,7 @@ class Canvas(arcade.Window):
         self._margin = margin
 
         self._debug = debug
-        self._debug_text = ''
+        self._debug_text = ""
 
     def add(self, fig: Vector):
         self._vectors[fig] = 0
@@ -57,7 +57,7 @@ class Canvas(arcade.Window):
         left, right, bottom, top = self.get_viewport()
         x = math.ceil((x - right) / self._scale)
         y = math.ceil((y - bottom) / self._scale)
-        self._debug_text = f'Mouse at {x=}{y=}'
+        self._debug_text = f"Mouse at {x=}{y=}"
 
     def on_update(self, delta_time: float):
         while not self._remove_queue.empty():
@@ -97,7 +97,9 @@ class Canvas(arcade.Window):
 
         if self._debug_text:
             left, right, bottom, top = self.get_viewport()
-            arcade.draw_text(self._debug_text, left + 10, bottom + 5, color=arcade.color.RED)
+            arcade.draw_text(
+                self._debug_text, left + 10, bottom + 5, color=arcade.color.RED
+            )
 
     def apply_margine(self):
         min_x, max_x = 0, 0
@@ -109,7 +111,9 @@ class Canvas(arcade.Window):
             max_y = max(sprite.center_y, max_y)
         margin = self._margin
         # self.set_viewport(min_x - margin, max_x + margin, max_y + margin, min_y - margin)
-        self.set_viewport(min_x - margin, max_x + margin, min_y - margin, max_y + margin)
+        self.set_viewport(
+            min_x - margin, max_x + margin, min_y - margin, max_y + margin
+        )
 
     def draw_textures(self):
         """

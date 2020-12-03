@@ -25,12 +25,12 @@ def main(puzzle_input_f):
 
     entries = []
     for l in lines:
-        rule, letter, pw = l.split(' ')
-        mini, maxi = rule.split('-')
+        rule, letter, pw = l.split(" ")
+        mini, maxi = rule.split("-")
         mini = int(mini)
         maxi = int(maxi)
 
-        letter = letter.replace(':', '')
+        letter = letter.replace(":", "")
         entries.append((mini, maxi, letter, pw))
 
     print("Part 1: ", part_1(entries))

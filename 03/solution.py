@@ -16,7 +16,7 @@ def part_1(data: Map, cx=3, cy=1):
     x = y = 0
     trees = 0
     while cell := data.get(x, y):
-        trees += 1 if cell == '#' else 0
+        trees += 1 if cell == "#" else 0
 
         x += cx
         y += cy

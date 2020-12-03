@@ -45,12 +45,7 @@ class ArrayGraph(GridGraph):
 
     def neighbors(self, current: Vector) -> List:
         x, y = current
-        pos_neighbors = [
-            (x, y - 1),
-            (x - 1, y),
-            (x + 1, y),
-            (x, y + 1)
-        ]
+        pos_neighbors = [(x, y - 1), (x - 1, y), (x + 1, y), (x, y + 1)]
         return [(x, y) for x, y in pos_neighbors if self._map[x][y]]
 
 
@@ -67,12 +62,7 @@ class MapGraph(GridGraph):
 
     def neighbors(self, current: Vector) -> List:
         x, y = current
-        pos_neighbors = [
-            (x, y - 1),
-            (x - 1, y),
-            (x + 1, y),
-            (x, y + 1)
-        ]
+        pos_neighbors = [(x, y - 1), (x - 1, y), (x + 1, y), (x, y + 1)]
         return [(x, y) for x, y in pos_neighbors if self._map[x][y]]
 
 
@@ -89,12 +79,7 @@ class SetGraph(GridGraph):
 
     def neighbors(self, current: Vector) -> List:
         x, y = current
-        pos_neighbors = [
-            (x, y - 1),
-            (x - 1, y),
-            (x + 1, y),
-            (x, y + 1)
-        ]
+        pos_neighbors = [(x, y - 1), (x - 1, y), (x + 1, y), (x, y + 1)]
         return [(x, y) for x, y in pos_neighbors if (x, y) not in self._map]
 
 
@@ -128,7 +113,7 @@ def a_star_search(graph: Graph, start, goal):
         neighbors = graph.neighbors(current)
         for next in neighbors:
             new_cost = cost_so_far[current][0] + graph.cost(current, next)
-            if (next not in cost_so_far or (new_cost, flip(current)) < cost_so_far[next]):
+            if next not in cost_so_far or (new_cost, flip(current)) < cost_so_far[next]:
                 cost_so_far[next] = (new_cost, flip(current))
                 priority = new_cost + manhattan(goal, next)
 
