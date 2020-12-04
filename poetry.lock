@@ -17,7 +17,7 @@ requests = "*"
 type = "git"
 url = "https://github.com/eruvanos/aocpy.git"
 reference = "master"
-resolved_reference = "881ed99978c5272e554d0139c41d90f995073037"
+resolved_reference = "d743fe48b675e3440c98d5e1b0ea94e4d47302a2"
 
 [[package]]
 name = "appdirs"
