@@ -2,7 +2,7 @@ import re
 from collections import defaultdict
 from typing import List, Dict, NamedTuple
 
-BAG_PATTERN = re.compile(r"(\d) (.*) bag")
+BAG_PATTERN = re.compile(r"(\d) ([^,.]*) bag")
 
 
 class Rule(NamedTuple):
@@ -50,15 +50,8 @@ def parse(lines):
         rule_color, rest = line.split(" bags contain ")
 
         rules[rule_color] = []
-        if rest == "no other bags.":
-            pass
-        else:
-            bags = rest.split(",")
-            for bag in bags:
-                m = BAG_PATTERN.search(bag)
-
-                amount, color = m.groups()
-                rules[rule_color].append(Rule(int(amount), color))
+        for amount, color in BAG_PATTERN.findall(rest):
+            rules[rule_color].append(Rule(int(amount), color))
 
     return rules
 
