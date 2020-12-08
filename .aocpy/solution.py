@@ -12,9 +12,8 @@ def parse(lines):
 
 def main(puzzle_input_f):
     lines = [l.strip() for l in puzzle_input_f.readlines() if l]
-    data = parse(lines)
-    print("Part 1: ", part_1(data))
-    print("Part 2: ", part_2(data))
+    print("Part 1: ", part_1(parse(lines)))
+    print("Part 2: ", part_2(parse(lines)))
 
 
 if __name__ == "__main__":
