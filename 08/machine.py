@@ -7,10 +7,12 @@ class Machine:
     def __init__(self, code: List[Tuple]):
         self.code = code
 
+        # state
         self.pc = 0
         self.acc = 0
-
         self.term = False
+
+        # runtime
         self.debug = False
         self.history: deque = deque()
 
@@ -54,6 +56,11 @@ class Machine:
 
         if self.pc >= len(self.code):
             self.term = True
+
+    def run(self, debug=False):
+        while not self.term:
+            self.step(debug=debug)
+        return self.acc
 
     def undo(self):
         self.pc, self.acc = self.history.pop()
