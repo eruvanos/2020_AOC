@@ -7,6 +7,7 @@ def part_2(data):
 
 
 def parse(lines):
+    # lines = [int(l) for l in lines]
     return lines
 
 
