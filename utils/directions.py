@@ -1,20 +1,44 @@
-from utils import Vector
+from utils.vector import Vector
 
-ARROW_DIR = {
-    "R": Vector(0, 1),
-    "L": Vector(0, -1),
-    "U": Vector(1, 0),
-    "D": Vector(-1, 0),
-}
-"""Right, Left, Up, Down"""
+# Directions
+NORTH = "N"
+SOUTH = "S"
+EAST = "E"
+WEST = "W"
+LEFT = "L"
+RIGHT = "R"
+FORWARD = "F"
 
-NESW_DIR = {
-    "E": Vector(0, 1),
-    "W": Vector(0, -1),
-    "N": Vector(1, 0),
-    "S": Vector(-1, 0),
+# Vectors for NESW
+NESW_VEC = {
+    "E": Vector(1, 0),
+    "W": Vector(-1, 0),
+    "N": Vector(0, 1),
+    "S": Vector(0, -1),
 }
-"""North, East, South, West"""
+
+# Turn maps for NESW
+TURN_LEFT = {
+    "E": "N",
+    "W": "S",
+    "N": "W",
+    "S": "E",
+}
+TURN_RIGHT = {
+    "E": "S",
+    "W": "N",
+    "N": "E",
+    "S": "W",
+}
+
+# ARROW directions
+UDRL_VEC = {
+    "U": Vector(0, 1),
+    "D": Vector(0, -1),
+    "R": Vector(1, 0),
+    "L": Vector(-1, 0),
+}
+
 
 NESW_ARROW = {
     "E": "R",
