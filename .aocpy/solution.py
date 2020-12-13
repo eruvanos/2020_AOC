@@ -1,3 +1,8 @@
+import sys
+
+sys.path.append("..")
+
+
 def part_1(data):
     pass
 
