@@ -1,6 +1,10 @@
+# fmt: off
 import sys
 
 sys.path.append("..")
+
+
+# fmt: on
 
 
 def part_1(data):
