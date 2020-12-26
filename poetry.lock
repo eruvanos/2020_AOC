@@ -163,16 +163,16 @@ python-versions = "*"
 
 [[package]]
 name = "mcore"
-version = "0.1.1"
+version = "0.1.2"
 description = "Supportive code for logging, testing, network, and arcade game development."
 category = "main"
 optional = false
-python-versions = ">=3.7.0"
-develop = true
+python-versions = ">=3.7.0,<4.0"
+develop = false
 
 [package.extras]
 secnet = ["cryptography (>=3.1.1,<4.0.0)"]
-game = ["arcade (>=2.4.3,<3.0.0)", "esper (>=1.3,<2.0)"]
+game = ["arcade (>=2.4.3,<3.0.0)", "esper (>=1.3,<2.0)", "arcade-imgui (>=0.1.1,<0.2.0)"]
 test = ["requests (>=2.24.0,<3.0.0)", "Flask (>=1.1.2,<2.0.0)", "mirakuru (>=2.3.0,<3.0.0)"]
 all = ["cryptography (>=3.1.1,<4.0.0)", "arcade (>=2.4.3,<3.0.0)", "esper (>=1.3,<2.0)", "requests (>=2.24.0,<3.0.0)", "Flask (>=1.1.2,<2.0.0)", "mirakuru (>=2.3.0,<3.0.0)"]
 
@@ -180,7 +180,7 @@ all = ["cryptography (>=3.1.1,<4.0.0)", "arcade (>=2.4.3,<3.0.0)", "esper (>=1.3
 type = "git"
 url = "https://github.com/eruvanos/mcore"
 reference = "main"
-resolved_reference = "1a8f74dfecab201f3040b4187d5fe51ceed41320"
+resolved_reference = "4021693d93cdd2001c51a5e2c9573467f6b8bf4b"
 
 [[package]]
 name = "mypy-extensions"
@@ -329,6 +329,17 @@ python-versions = "*"
 requests = "*"
 
 [[package]]
+name = "pytest-timeout"
+version = "1.4.2"
+description = "py.test plugin to abort hanging tests"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pytest = ">=3.6.0"
+
+[[package]]
 name = "pytiled-parser"
 version = "0.9.4a3"
 description = "Python Library for parsing Tiled Map Editor maps."
@@ -432,7 +443,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9.0"
-content-hash = "93a711a96778f1984c51797a49d948ddb2343350ddee399e7ab4381801847e0c"
+content-hash = "b97007c70cb99d9e6e49056c90d3d09a94c3579bb6858c81fde1b6e8bbc78b62"
 
 [metadata.files]
 aocpy = []
@@ -657,6 +668,10 @@ pytest = [
 pytest-aoc = [
     {file = "pytest-aoc-1.1.tar.gz", hash = "sha256:959b23871cc23eda0e668b73677097d06516c0159dac626e1a8975e643b6ebdd"},
     {file = "pytest_aoc-1.1-py3-none-any.whl", hash = "sha256:0474651b7bd6bb8ac3607be9518cb14137dd511047da8db6ce9f5bbe8b2c8d28"},
+]
+pytest-timeout = [
+    {file = "pytest-timeout-1.4.2.tar.gz", hash = "sha256:20b3113cf6e4e80ce2d403b6fb56e9e1b871b510259206d40ff8d609f48bda76"},
+    {file = "pytest_timeout-1.4.2-py2.py3-none-any.whl", hash = "sha256:541d7aa19b9a6b4e475c759fd6073ef43d7cdc9a92d95644c260076eb257a063"},
 ]
 pytiled-parser = [
     {file = "pytiled_parser-0.9.4a3-py3-none-any.whl", hash = "sha256:166ad96d81aa1aef3102d95d1a1f257111e41d9fe5bc100a4993b496151e9f07"},
